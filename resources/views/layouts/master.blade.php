@@ -18,7 +18,7 @@
 		</div>
 
 		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery.js"></script>
+		<script src="{{ url('/assets/jquery/jquery.min.js') }}"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="{{ url('/assets/bootstrap/js/bootstrap.min.js') }}" ></script>
 	</body>
