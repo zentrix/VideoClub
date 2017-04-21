@@ -25,7 +25,7 @@ class catalogTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('catalog/show/3')
-                    ->assertSee('vista detalle peliculas 3');
+                    ->assertSee('Detalles de peliculas 3');
         });
     }
 
@@ -33,7 +33,7 @@ class catalogTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('catalog/create')
-                    ->assertSee('Añadir peliculas');
+                    ->assertSee('Agregar pelicula');
         });
     }
 
@@ -41,7 +41,7 @@ class catalogTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('catalog/edit/3')
-                    ->assertSee('Modificar peliculas 3');
+                    ->assertSee('Editar pelicula 3');
         });
     }
 
