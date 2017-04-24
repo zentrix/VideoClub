@@ -5,6 +5,7 @@ namespace Tests\Browser;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use App\Movie;
 
 class catalogTest extends DuskTestCase
 {
@@ -16,8 +17,12 @@ class catalogTest extends DuskTestCase
     public function testCatalog()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('catalog')
-                    ->assertSee('Listado de peliculas');
+            $movies = Movie::all();
+            $browser->visit('catalog');
+            foreach ($movies as $movie) {
+                $browser->assertSee($movie->id);
+                $browser->assertSee($movie->title);
+            }
         });
     }
 
