@@ -26,6 +26,6 @@ class CatalogController extends Controller
 
     public function getEdit($id)
     {
-    	return view('catalog.edit', array('id' => Movie::findOrFail($id)));
+    	return view('catalog.edit', array('pelicula' => Movie::findOrFail($id)));
     }
 }

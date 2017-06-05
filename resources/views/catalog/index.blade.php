@@ -1,8 +1,8 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 	
-	Listado de peliculas
+	<h1 class="text-center">Listado de peliculas</h1>
 	
 	<div class="row">
 		@foreach($movies as $movie)
